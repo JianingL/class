@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+    <script src="jquery-1.11.3.js"></script>
+    <script src="angular.js"></script>
+    <script src="cool.js"></script>
+    <script src="ngCool.js"></script>
+</head>
+<body>
+<p>fatboyfriend is so handsome</p>
+<div class="text-center">
+    <img id="img" width="200" height="300">
+</div>
+<div>
+    <button id="button1">click me</button>
+    <button id="button2">click me!</button>
+</div>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <button id="button3" ng-click="changeimg()">click me!!</button>
+    <img id="img2" ng-src="{{coolimg}}" width="200" height="300" >
+</div>
+<div>
+    <input type="text" id="text1">
+    <p id="p1"></p>
+</div>
+<div>
+    <input type="text" id="text2">
+    <p id="p2"></p>
+</div>
+<div ng-app="">
+    <input type="text" ng-model="text3">
+    <p>{{text3}}</p>
+</div>
+
+</body>
+</html>
