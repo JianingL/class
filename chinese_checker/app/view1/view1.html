@@ -1,0 +1,23 @@
+<style>
+    .hole{
+        background: lightblue;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+    }
+    .selected{
+        background: lightgreen;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+    }
+</style>
+<div style="position: relative; top:50px; left:200px">
+    <div ng-repeat="row in board track by $index">
+        <div ng-repeat="hole in row track by $index" style="position: absolute; top:{{($parent.$index)*0.866*30+'px'}}; left:{{(($parent.$index)*30*(-0.5) + ($index)*30)+'px'}}">
+            <div ng-if="hole" class="hole" ng-click="select($parent.$index,$parent.$parent.$index)" ng-class="hole.piece.style">{{hole.piece.label}}</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<p>
+    小人走路
+</p>
+
+<table border="1">
+    <tr ng-repeat="row in board track by $index">
+        <td height="30" width="30" ng-repeat="box in row track by $index" ng-click="play($parent.$index, $index)">{{box}}</td>
+    </tr>
+</table>
+
+<p ng-if="hitWall">
+    hitwall
+</p>
